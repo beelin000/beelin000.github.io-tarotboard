@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韦特塔罗牌占卜</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>韦特塔罗牌占卜</h1>
+            <p>探索你的过去、现在和未来</p>
+        </header>
+
+        <div class="black-table">
+            <div class="controls">
+                <div class="question-section">
+                    <textarea id="question" placeholder="输入你的问题...（例如：如何提升工作表现？）"></textarea>
+                    <button id="ask-btn">开始占卜</button>
+                </div>
+                
+                <div class="spread-selector">
+                    <label for="spread">选择牌阵：</label>
+                    <select id="spread">
+                        <option value="three-card">三张牌阵（过去-现在-未来）</option>
+                        <option value="single-card">单张牌（简单指引）</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="reading-area">
+                <div id="shuffling-message">请先输入问题并点击"开始占卜"</div>
+                <div id="card-display" class="hidden">
+                    <div class="spread-container" id="spread-container"></div>
+                    <button id="interpret-btn">解读牌面</button>
+                </div>
+                
+                <div id="interpretation" class="hidden">
+                    <h3>牌面解读</h3>
+                    <div id="interpretation-content"></div>
+                    <button id="new-reading-btn">新的占卜</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
